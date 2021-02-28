@@ -28,9 +28,9 @@ node {
     //https://github.com/facebook/jest/issues/7441
     stage('Testing') {
         if (isUnix()) {
-            sh "npm run test"
+            sh "npm run test --watch=false"
         } else {
-            bat(/npm run test/)
+            bat(/npm run test --watch=false/)
         }
     }
 
