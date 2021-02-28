@@ -28,9 +28,9 @@ node {
     //https://github.com/facebook/jest/issues/7441
     stage('Testing') {
         if (isUnix()) {
-            sh "npm run test --watch=false"
+            sh "ng test --browsers ChromeHeadless"
         } else {
-            bat(/npm run test --watch=false/)
+            bat(/ng test --browsers ChromeHeadless/)
         }
     }
 
